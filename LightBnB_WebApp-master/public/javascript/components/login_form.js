@@ -26,12 +26,13 @@ $(() => {
     const data = $(this).serialize();
     logIn(data)
       .then(json => {
-        console.log(json);
+        console.log("json FE", json);
+        console.log("user FE", json);
         if (!json.user) {
           views_manager.show('error', 'Failed to login');
           return;
         }
-        console.log(json.user);
+        console.log("json.user", json.user);
         header.update(json.user);
         views_manager.show('listings');
       });
