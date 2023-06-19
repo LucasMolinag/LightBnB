@@ -78,8 +78,8 @@ const addUser = function (user) {
  * @param {string} guest_id The id of the user.
  * @return {Promise<[{}]>} A promise to the reservations.
  */
-const getAllReservations = function (guest_id, limit = 10) {
-  const query = `SELECT reservations.*, avg(rating) as average_rating
+const getAllReservations = function (guest_id) {
+  const query = `SELECT properties.*, avg(rating) as average_rating
   FROM reservations
   JOIN properties ON reservations.property_id = properties.id
   JOIN property_reviews ON properties.id = property_reviews.property_id
