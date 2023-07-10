@@ -19,6 +19,36 @@ This project is a simple multi-page website that uses server-side JavaScript to 
   `$ git clone https://github.com/YOUR-USERNAME/lightbnb`
 4. Done!
 
+## Setting up the Database
+
+1. In the psql terminal create a database called lightbnb using the following command:
+
+`CREATE DATABASE lightbnb;`
+
+2. Connect to the database:
+
+`\c lightbnb`
+
+3. Run the following command to setup the database:
+
+`\i migrations/01_schema.sql`
+
+4. Verify tables were created by running the following command:
+
+`\dt`
+
+5. tables should have been created:
+
+properties
+property_reviews
+reservetions
+users
+
+6. Populate database:
+
+`\i seeds/01_seeds.sql`
+`\i seeds/02_seeds.sql`
+
 ## Finishing touches
 1. Head into /lightbnb/LightBnB_WebApp-master
 3. Install dependencies using the `npm install` command.
