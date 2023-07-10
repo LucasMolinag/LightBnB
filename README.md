@@ -39,10 +39,10 @@ This project is a simple multi-page website that uses server-side JavaScript to 
 
 5. tables should have been created:
 
-properties
-property_reviews
-reservetions
-users
+- `properties`
+- `property_reviews`
+- `reservetions`
+- `users`
 
 6. Populate database:
 
